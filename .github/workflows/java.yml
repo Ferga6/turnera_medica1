@@ -12,4 +12,4 @@ jobs:
           distribution: temurin
           java-version: '8'
           cache: maven
-      - run: sh mvnw -B clean verify
+      - run: ./mvnw -B clean verify

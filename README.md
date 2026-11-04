@@ -16,7 +16,7 @@ java -jar target/turnera-medica.jar
 En Linux o macOS:
 
 ```sh
-sh mvnw clean package
+./mvnw clean package
 java -jar target/turnera-medica.jar
 ```
 
