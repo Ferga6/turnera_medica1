@@ -1,0 +1,33 @@
+AVANCE 1 - TPI Laboratorio I
+Alumno: Facundo Robles
+
+Tema elegido: 3 - Turnera medica
+
+Entidad con CRUD funcionando: Medico (y Paciente)
+
+Clases de entidad y relaciones:
+- Usuario: datos comunes (usuario, contrasena, nombre, apellido). Un Usuario solo es el administrador.
+- Medico: hereda de Usuario. Agrega matricula, especialidad y honorario por consulta.
+- Paciente: hereda de Usuario. Agrega dni y telefono.
+- Turno: tiene un Medico y un Paciente (composicion), fecha, hora y el monto de la consulta.
+Ademas, en la logica:
+- Clinica: guarda las listas de usuarios y turnos y tiene el CRUD con las validaciones.
+- TurnoMedicoException: excepcion propia para los errores de validacion.
+
+Que esta hecho y funciona:
+- Las clases del modelo con herencia (Medico y Paciente extienden Usuario).
+- CRUD de medicos y pacientes en la clase Clinica: agregar, listar, buscar
+  (medico por matricula, paciente por DNI), modificar y eliminar.
+- Validaciones: campos obligatorios, usuario/matricula/DNI no repetidos, DNI de 7 u 8 numeros,
+  honorario mayor a cero, no se puede eliminar un medico o paciente que tenga turnos.
+- El proyecto abre en IntelliJ y se ejecuta sin errores. Por ahora se prueba desde un Main por consola.
+
+Que falta y que voy a hacer primero:
+1. Pantallas en Swing para el CRUD de medicos (listado y formulario de alta/modificacion).
+2. Guardar los datos en la base (H2 con JDBC y DAO, como vimos en clase) para que no se pierdan al cerrar.
+3. Pasar el CRUD de pacientes a Swing.
+4. Dar turnos validando que el medico no tenga otro turno a la misma hora.
+5. Reporte de cuanto cobro un medico entre dos fechas.
+
+En que me trabe:
+- Todavia no llegue a conectar el proyecto con la base de datos ni a armar las pantallas en Swing.
